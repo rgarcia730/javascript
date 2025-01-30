@@ -224,13 +224,12 @@ console.log(2 * (4 + 8));
     La segunda variable debe ser un número con el valor: 3. Nombre la variable three.
     La tercera variable debe ser una cadena con el siguiente valor: "D!". Nombre la variable d.
     Registre en la consola el siguiente código: now + three + d.
-    Nota: La salida esperada debería ser: "Now in 3D!".
+    // Nota: La salida esperada debería ser: "Now in 3D!".
     var now = "Now in ";
     var three = "3";
     var d = "D";
     console.log(now + three + d);
 */
-
 /* Tarea 6: Utilizar el operador += para acumular valores en una variable
     Codifique una nueva variable y nómbrela counter, asignándole el valor de 0.
     En la línea siguiente, utilice el operador += para incrementar el valor de contador en 5.
@@ -255,8 +254,8 @@ console.log(2 * (4 + 8));
     }
 */
 
-/* if, else if, else 
-    var place = "cuarto";
+// if, else if, else 
+ /* var place = "cuarto";
     if (place == "primero"){
         console.log("Medalla de oro")
     }else if(place == "segundo"){
@@ -286,3 +285,315 @@ console.log(2 * (4 + 8));
     }
 */
 
+//Ejercicio: Practicar enunciados condicionales
+
+/* Ejercicio 1 if, els if
+Complete los siguientes pasos para crear: ¿Tiene usted edad suficiente? 
+Declare una variable edad utilizando la palabra clave var y fíjela en el número 10.
+Añada una sentencia if que compruebe si el valor de la variable age es mayor o igual que el número 65. 
+Dentro del bloque if, console.log la sentencia "Obtiene sus ingresos de su pensión".
+Añada un bloque "else if", en el que comprobará si el valor de la edad es menor que 65 y mayor o igual que 18.
+Dentro de este bloque "else if", escriba "console.log" y a continuación "Cada mes recibe un salario".
+Añada otro bloque "else if", y esta vez compruebe si el valor de la edad es inferior a 18 años. 
+Dentro del bloque "else if", "escriba console.log" y luego "Recibes un subsidio".
+Añada una sentencia "else" para capturar cualquier otro valor. 
+Dentro del bloque, escriba "console.log" y luego "El valor de la variable edad no es numérico".
+Intente ajustar la edad y ejecute el programa para ver cómo afecta a la salida.
+
+var age = 10;
+if (age >= 65) {
+    console.log("Obtiene sus ingresos de su pensión");
+} else if (age < 65 && age >= 18) {
+    console.log("Cada mes recibe un salario");
+} else if (age < 18) {
+    console.log("Recibes un subsidio");            
+} else {
+    console.log("El valor de la variable edad no es numérico");
+}
+*/
+
+/* Ejercicio 2 switch
+Codifique el programa de los días de la semana como una sentencia switch
+En la línea siguiente, defina una nueva variable, nómbrela day, y ajuste su valor a "Domingo".
+Comience a codificar una sentencia switch, pasando la variable day como la expresión a evaluar.
+Dentro de switch, añada casos para cada día de la semana, empezando por 'lunes', y terminando por 'domingo'.
+Asegúrese de utilizar valores de cadena para los días. Dentro de cada caso, por ahora, sólo añada un console.log('Haga algo'), y añada un break; en la línea inferior.
+En la parte inferior de la sentencia switch, añada el caso por defecto y añada un console.log('No existe tal día').
+Por último, actualice las llamadas console.log para cada caso, en función de la actividad que tenga en cada uno de los días.
+
+var dsem ="lunes";
+switch (dsem) {
+    case "lunes":
+        console.log("primer día")
+        break;
+    case "martes":
+        console.log("segundo día")
+        break;
+    case "miercoles":
+        console.log("tercer día")
+        break;
+    case "jueves":
+        console.log("cuarto día")
+        break;
+    case "viernes":
+        console.log("quinto día")
+        break;   
+    case "sabado":
+        console.log("primer día, fin de semana")
+        break; 
+    case "domingo":
+        console.log("segundo día, fin de semana")
+        break;
+        default:
+        console.log("No existe tal día")
+        break;
+}
+*/
+
+// bucles o ciclos
+
+/* for
+Se asigna el contador, que generalmente es i
+En el primer argumento se declara la variable y se establece el número desde el cual inicia a contar
+El segundo argumento el numero hasta el cual se ejecutará el ciclo
+El tercer argumento es el incremento
+
+for (var i = 1; i <= 10; i+=1) {
+    console.log(i);
+}
+console.log("Vamos");//contar hacia adelante
+for (var i = 10; i > 0; i-=1) {
+    console.log(i);
+}
+console.log("Vamos");//contar hacia atras
+*/
+
+/* while
+Se crea la variable contador fuera del ciclo
+Se establece la condición para que se ejecute el bucle
+Se da laistrucción que se ejecutará
+se asigna el valor a contador de incremento o decremento
+var counter = 1;
+while (counter <= 5) {
+    console.log(counter);
+    counter =counter +1; // incremento, cuenta hacia adelante   
+}
+console.log("Vamos");
+
+var counter = 5;
+while (counter > 0) {
+    console.log(counter);
+    counter =counter -1; // decremento, cuenta hacia atras   
+}
+console.log("Vamos"); 
+*/
+
+// Ejercicios for y while
+
+/*Tarea 1
+Escriba un bucle "for" que realice exactamente el mismo código repetitivo que éste:
+
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log('Conteo completo!')
+
+for (var i = 1; i <= 5; i+=1) {
+    console.log(i);
+}
+console.log("Conteo completo!");
+*/
+
+/* Tarea 2 
+Escriba un bucle "for" que realice exactamente el mismo código repetitivo que éste:
+
+console.log(5)
+console.log(4)
+console.log(3)
+console.log(2)
+console.log(1)
+console.log('Conteo terminado!')
+
+for (var i = 5; i > 0; i-=1) {
+    console.log(i);
+}
+console.log("Conteo terminado!");
+*/
+
+/* Tarea 3
+Escriba un bucle "while" que realice exactamente el mismo código repetitivo que éste:
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log('Conteo completo!')
+Nota: Nombre su variable de incremento i. 
+Actualice la variable en el bucle while utilizando i++.
+
+var i = 1;
+while (i<=5) {
+console.log(i);
+i += 1;// se puede incrementar con i = i + 1 o i += 1 o i ++
+}
+console.log("Conteo completo!");
+*/
+
+/* Tarea 4
+Escriba un bucle "while" que realice exactamente el mismo código repetitivo que éste:
+console.log(5)
+console.log(4)
+console.log(3)
+console.log(2)
+console.log(1)
+console.log("Conteo terminado!")
+Nota: En el bucle while, decremente el valor de 
+i utilizando: i = i - 1.
+
+var i = 5;
+while (i > 0) {
+console.log(i);
+i = i - 1;    
+}
+console.log("Conteo terminado!");
+*/
+
+/* Tarea 5
+Escriba un bucle "while" que realice exactamente el mismo código repetitivo que éste:
+console.log(2018)
+console.log(2019)
+console.log(2020)
+console.log(2021)
+console.log(2022))
+
+var i = 2018;
+while (i <= 2022) {
+console.log(i);
+i ++    
+}
+*/
+
+// Ciclos anidados
+/* crearemos ciclos anidados para que nos de un programa por dos semanas de lunes a viernes
+
+for (var i = 1; i <= 2 ; i++) {
+    for (var j = 1; j <= 5; j++) {
+        console.log("Semana " + i + ", día "+j);   
+    }        
+}
+*/
+/* Multiplicación de dos numeros
+
+for (var i = 0; i <= 2; i++) {
+    for (var j = 0; j <= 10; j++) {
+        console.log(i + " x " + j + " = "+ i*j);
+    }    
+}
+*/
+
+/* División
+
+for (var i = 100; i >= 10 ; i = i - 10 ) {
+    for (var j = 10; j > 4; j = j - 5) {
+        console.log(i+ " dividido en " + j + " es igual a ", i/j);        
+    }
+}*/
+
+//Ejemplo bucles
+/*
+var cubes = 'ABCDEFG';
+//styling console output using CSS with a %c format specifier
+for (var i = 0; i < cubes.length; i++) {
+    var styles = "font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
+    console.log("%c" + cubes[i], styles)
+}*/
+
+//Ejercicios con bucles
+/* Ejercicio 1
+En este ejercicio, creará el código para un for loop, utilizando la variable contador 
+llamada i empezando por 1.
+Para hacer que el contador se incremente en 1 en cada bucle, utilizará i++.
+La condición de salida para el bucle for debe coincidir con la salida dada a continuación. 
+Dentro del bucle, escriba una sentencia if-else, que comprobará las siguientes condiciones:
+
+Primero, comprobará si el valor de i es  1. 
+Si lo es, su código registrará por consola la cadena "Medalla de oro".
+
+A continuación, comprobará si el valor de i es 2. 
+Si lo es, su código registrará por consola la cadena "Medalla de plata" .
+
+A continuación, su código comprobará si el valor de i es 3. 
+Si lo es, registrará en consola la cadena "Medalla de bronce" .
+
+Para todos los valores restantes de i, su código registrará en consola sólo el valor de i.
+Nota: El registro de consola esperado de todo el código debería ser el siguiente
+Medalla de oro
+Medalla de plata
+Medalla de bronce
+4
+5
+6
+7
+8
+9
+10
+
+for (var i = 1; i <= 10; i++) {
+    if (i == 1) {
+        console.log("Medalla de oro");           
+    } else if (i == 2) {
+        console.log("Medalla de plata");        
+    } else if (i == 3) {
+        console.log("Medalla de bronce");
+    } else {
+        console.log(i);
+    }
+}
+*/
+
+/* Ejercicio 2 
+ Utilice el código completado de la tarea anterior, pero convierta 
+ los condicionales en una sentencia switch.
+ Cuando codifique la solución, la salida en la consola debe seguir siendo exactamente 
+ la misma que en la pregunta anterior.
+
+ Nota: Necesitará tres casos distintos para las tres medallas y un caso por defecto para
+ todos los demás valores de la variable i.
+ 
+ for (var i = 1; i <= 10; i++) {// ejercicio con for y switch
+    switch (i) {
+        case 1:
+            console.log("Medalla de oro");   
+            break;
+        case 2:
+            console.log("Medalla de plata");   
+            break;
+        case 3:
+            console.log("Medalla de bronce");   
+            break;
+        default:
+            console.log(i);
+        break;
+    }
+}
+var i = 1;
+while (i <= 10) {// ejercicio con while y swith
+    switch (i) {
+        case 1:
+            console.log("Medalla de oro");   
+            break;
+        case 2:
+            console.log("Medalla de plata");   
+            break;
+        case 3:
+            console.log("Medalla de bronce");   
+            break;
+        default:
+            console.log(i);
+        break;
+    }
+    i += 1;
+}
+*/
