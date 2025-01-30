@@ -1,0 +1,157 @@
+//Funciones
+/*function AddTwoNumbs() { // esta funcion toma las variables a y b, las suma, almacena el resultado en la variable c.
+    var a = 10;
+    var b = 20;
+    var c =  a + b;
+    console.log(c);
+}
+AddTwoNumbs(); // llamado de la función. Esta función se envia sin aprametros pues las variables se asignan dentro de la función.
+
+function AddTwoNumbs(a,b) { // esta funcion toma las variables a y b, que se asignan como parametros dentro de la función al llamarla
+    var c =  a + b;
+    console.log(c);
+}
+AddTwoNumbs(2,3); // llamado de la función. Esta función envia los valores de a y b
+AddTwoNumbs(8,9); // llamado de la función. Esta función envia los valores de a y b
+*/
+
+//Construir y llamar funciones
+/*creamos la función
+
+function ListArrayItems(arr) {// se crea la función para que reciba un parapetro tipo array
+ // código pendiente 
+}
+
+Ahora, necesitamos codificar un bucle for para hacer un bucle sobre un array.
+Como ya hemos visto en lecciones anteriores de este curso, un bucle for necesita 
+la siguiente información: 
+
+1. el valor inicial del contador del bucle como variable temporali
+2. la condición de salida (el valor máximo de la variable contador del bucle i, 
+por encima del cual el bucle deja de ejecutarse) 
+3. cómo actualizar el valor de i después de cada bucle
+
+Esta es la información que utilizaré en la declaración de esta función: 
+1. El contador inicial del bucle será 0. La razón de ponerlo a cero se debe a que las 
+matrices también se cuentan a partir de cero. 
+Esto significa que tendré un mapeo uno a uno del valor actual de la variable i 
+en cualquier momento dado, correspondiente a la misma posición de índice de cualquier 
+elemento de la matriz arr 2. 
+La condición de salida del bucle for es cuando el valor dei es igual o mayor que arr.length. 
+Dado que arr.length cuenta el número de elementos de la matriz a partir de uno, y que 
+los elementos de la matriz se indexan a partir de cero, esto significa efectivamente
+que en cuantoi sea igual aarr.length, el bucle terminará y se ejecutará cualquier otro 
+código posterior. 
+Esto significa prácticamente que la condición de salida de este bucle for será i < arr.length 
+devolviendo false. 
+En otras palabras, mientras i < arr.length sea verdadero, este bucle for continuará 
+ejecutándose. 3. Para asegurarme de que no se salta ninguno de los elementos de la matriz arr, 
+tengo que incrementar el valor dei en1 después de cada bucle.
+
+Ahora que sé exactamente cómo debe comportarse mi bucle for, puedo añadirlo a mi 
+función listArrayItems():
+
+function listArrayItems(arr) {
+    for (var i = 0; i < array.length; i++) {// declaramos el ciclo para que inicie en 0 y termine en el largo del arreglo
+        // código pendiente 
+    }
+}
+*/
+/* Ahora sólo me queda decidir cómo quiero dar salida a cada elemento de la matrizarr recibida.
+
+Puede ser tan sencillo como registrar en la consola el índice de elemento del array del 
+valor actual de i:
+
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]); // muestra el valor almacenado en la posición i del arreglo
+    }    
+}//Ahora invoco la funciónlistArrayItems, puedo, por ejemplo, darle la siguiente matriz de colores:
+var colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosa"]
+listArrayItems(colores);
+*/
+/*Puedo actualizar la salida como quiera. Por ejemplo, aquí están mis elementos arr con 
+un número delante de cada elemento:  
+
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(i, arr[i]); // muestra la posición y el valor almacenado en la posición i del arreglo
+    }    
+}//Ahora invoco la funciónlistArrayItems, puedo, por ejemplo, darle la siguiente matriz de colores:
+var colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosa"]
+listArrayItems(colores);
+*/
+/* Para iniciar el recuento desde uno en lugar de cero, puedo actualizar mi declaración de función de la siguiente manera:  
+
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(i+1, arr[i]); // muestra la posición mas 1 y el valor almacenado en la posición i del arreglo
+    }    
+}//Ahora invoco la funciónlistArrayItems, puedo, por ejemplo, darle la siguiente matriz de colores:
+
+var colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosa"]
+listArrayItems(colores);
+*/
+
+/* Incluso puedo añadir una o más condiciones, como por ejemplo: 
+
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == "rojo") {// cuando el valor contenido en la dirección de memoria se rojo lo cambia por tomate
+            console.log(100 * i,"tomate!!");                       
+        } else {
+            console.log(100 * i,arr[i]);
+        }
+    }       
+}
+var colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosa"]
+listArrayItems(colores);
+
+*/
+
+// Ejercicio: Practicar con funciones
+
+/* Su tarea en este ejercicio es codificar una función que sea capaz de tomar una palabra y 
+localizar la posición de una letra elegida en esa palabra dada. 
+
+Tarea 1:
+Escriba una función llamada letterFinder que acepte dos parámetros: word y match.
+Tarea 2:
+Codifique un bucle 'for' dentro del cuerpo de la función. El contador del bucle for 
+debe comenzar en cero, incrementarse en 1 en cada iteración y salir cuando el valor de la 
+variable contador sea igual a la longitud del parámetro palabra .
+Tarea 3:
+Añada una sentencia if dentro del bucle for cuya condición funcione como sigue:
+Acceda a cada una de las letras dentro de la palabra pasada utilizando la variable contador, 
+con palabra[i].
+Compruebe si la palabra [ i] actual es igual al valor de coincidencia.
+Tarea 4:
+consola.log lo siguiente dentro del cuerpo de la sentencia if: 
+console.log('Encontrado el', coincidencia, 'en', i).
+Tarea 5:
+Escriba la condición else. Aquí sólo tendrá que registrar en la consola lo siguiente: 
+console.log(' ---No se ha encontrado ninguna coincidencia en', i).
+Tarea 6:
+Llame al buscador de letras y pásele como primer argumento la cadena "test" y como segundo 
+argumento la cadena "t".
+Su salida debería ser la siguiente
+Encontrada la t en 0
+---No se ha encontrado coincidencia en 1
+---No se encontró coincidencia en 2
+Encontrada la t en 3
+*/
+function letterFinder(palabra, letra) {
+    var cant = 0;
+    for (var i = 0; i < palabra.length; i++) {
+        if (palabra[i] == letra) {
+           // console.log("Encontrada la",letra, "en lo poscición",i+1);
+             cant = cant + 1; //suma la cantidad de veces que encuentra la letra                   
+        } else {
+           // console.log("---No se ha encontrado ninguna coincidencia en la posición", i+1);
+        }
+    }
+    console.log("La letra",letra,"esta",cant,"veces en la palabra",palabra);// muestra la 
+    // cantidad de veces que esta la letra en la palabra
+    //console.log("La letra ${letra} está ${cant} veces en la palabra ${palabra}.")
+}
+letterFinder("oso","o");
